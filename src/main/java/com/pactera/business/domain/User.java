@@ -2,7 +2,13 @@ package com.pactera.business.domain;
 
 import com.pactera.base.domain.BaseDomain;
 import javax.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
+@Getter
+@Setter
+@ToString
 public class User extends BaseDomain {
     /**
      * 名称
