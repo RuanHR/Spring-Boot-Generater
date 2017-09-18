@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @ClassName: ProjectConstant
@@ -8,7 +10,7 @@
 public final class ProjectConstant {
 
 	// JDBC配置，请修改为你项目的实际配置
-	public static final String JDBC_URL = "jdbc:mysql://192.168.19.20:3306/hna-risk-manager";
+	public static final String JDBC_URL = "jdbc:mysql://127.0.0.1:3306/spring-boot";
 	public static final String JDBC_USERNAME = "root";
 	public static final String JDBC_PASSWORD = "root";
 	public static final String JDBC_DIVER_CLASS_NAME = "com.mysql.jdbc.Driver";
@@ -29,5 +31,14 @@ public final class ProjectConstant {
 	public static final String MAPPER_INTERFACE_REFERENCE = BASE_PACKAGE + ".base.core.Mapper";
 	// BaseDomain继承方法
 	public static final String DOMAIN_EXTENDS_REFERENCE = BASE_PACKAGE + ".base.domain.BaseDomain";
+
+	public static void main(String[] args) {
+		List<String> tableNames = new ArrayList<>();
+		// 配置生成表
+		tableNames.add("user");
+
+		// 调用生成方法
+		CodeGenerator.genCode(tableNames);
+	}
 
 }

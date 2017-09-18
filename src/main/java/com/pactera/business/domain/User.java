@@ -5,14 +5,9 @@ import javax.persistence.*;
 
 public class User extends BaseDomain {
     /**
-     * 员工号
+     * 名称
      */
-    private String code;
-
-    /**
-     * 用户名
-     */
-    private String username;
+    private String name;
 
     /**
      * 密码
@@ -20,48 +15,13 @@ public class User extends BaseDomain {
     private String password;
 
     /**
-     * 加密盐
+     * 用户名
      */
-    private String salt;
+    private String username;
 
     /**
-     * 性别 0 女 1 男
-     */
-    private Integer gender;
-
-    /**
-     * 真实姓名
-     */
-    private String realname;
-
-    /**
-     * 电话
-     */
-    private String phone;
-
-    /**
-     * 员工描述
-     */
-    private String description;
-
-    /**
-     * 邮箱
-     */
-    private String email;
-
-    /**
-     * 备注
-     */
-    private String remark;
-
-    /**
-     * 部门id
+     * 业务线id
      */
     @Column(name = "org_id")
     private Long orgId;
-
-    /**
-     * 状态 0 不可用 1 可用
-     */
-    private Integer status;
 }
